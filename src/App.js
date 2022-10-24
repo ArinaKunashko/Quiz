@@ -1,25 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import s from './App.css';
+import React from "react"
+import AllQuestions from './Themes/AllQuestions';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './Home';
+import Navbar from './Navbar';
+import { jsQuiz, htmlQuiz, reactQuiz, cssQuiz
+} from './quizes'
 
-function App() {
+
+function AppJs () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+ <BrowserRouter>
+      <div className='app-wrapper'>
+
+      {/* <Navbar /> */}
+
+        <div className='app-wrapper-content'>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/jsQuestions' element={<AllQuestions questions={jsQuiz.questions} name={jsQuiz.name} />} />
+              <Route path='/cssQuestions' element={<AllQuestions questions={cssQuiz.questions} name={cssQuiz.name} />} />
+              <Route path='/htmlQuestions' element={<AllQuestions questions={htmlQuiz.questions} name={htmlQuiz.name} />} />
+              <Route path='/reactQuestions' element={<AllQuestions questions={reactQuiz.questions} name={reactQuiz.name} />} />
+
+            </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
+  )
+   
 }
 
-export default App;
+export default AppJs;
+
