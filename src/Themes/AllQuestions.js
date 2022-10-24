@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import s from "../App.css"
 
-const allQuestions = ({name, questions}) => {
+const AllQuestions = ({name, questions}) => {
     
   
     const Result = ({ correct }) => {
@@ -41,8 +41,8 @@ const allQuestions = ({name, questions}) => {
     
 
      
-      const [step, setStep] = React.useState(0)
-      const [correct, setCorrect] = React.useState(0)
+      const [step, setStep] = useState(0)
+      const [correct, setCorrect] = useState(0)
     
       const question = questions[step]
     
@@ -70,6 +70,6 @@ const allQuestions = ({name, questions}) => {
     
 
 }
-    export default allQuestions;
+    export default AllQuestions;
     
     
