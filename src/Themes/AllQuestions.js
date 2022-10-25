@@ -9,7 +9,7 @@ const AllQuestions = ({name, questions}) => {
         <div className="result">
           <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />
           <h2> Ваш результат: {correct} правильных ответов из {questions.length} </h2>
-          <a href="/">
+          <a href="/Quiz">
             <button className={s.tryagain}>Попробовать снова</button>
           </a>
         </div>

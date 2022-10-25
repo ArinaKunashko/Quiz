@@ -20,7 +20,7 @@ function AppJs () {
 
         <div className='app-wrapper-content'>
             <Routes>
-              <Route path='/' element={<Home />} />
+              <Route path='/Quiz' element={<Home />} />
               <Route path='/jsQuestions' element={<AllQuestions questions={jsQuiz.questions} name={jsQuiz.name} />} />
               <Route path='/cssQuestions' element={<AllQuestions questions={cssQuiz.questions} name={cssQuiz.name} />} />
               <Route path='/htmlQuestions' element={<AllQuestions questions={htmlQuiz.questions} name={htmlQuiz.name} />} />
