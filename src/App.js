@@ -5,9 +5,7 @@ import React from "react"
 import AllQuestions from './Themes/AllQuestions';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Home';
-import Navbar from './Navbar';
-import { jsQuiz, htmlQuiz, reactQuiz, cssQuiz
-} from './quizes'
+import { jsQuiz, htmlQuiz, reactQuiz, cssQuiz } from './quizes'
 
 
 function AppJs () {
@@ -15,8 +13,6 @@ function AppJs () {
     
  <BrowserRouter>
       <div className='app-wrapper'>
-
-      {/* <Navbar /> */}
 
         <div className='app-wrapper-content'>
             <Routes>
