@@ -1,16 +1,23 @@
 {
   "files": {
-    "main.css": "/Quiz/static/css/main.5a30c095.css",
-    "main.js": "/Quiz/static/js/main.cbdea969.js",
+    "main.css": "/Quiz/static/css/main.94ab3dc4.css",
+    "main.js": "/Quiz/static/js/main.6e1139b1.js",
     "static/js/787.28cb0dcd.chunk.js": "/Quiz/static/js/787.28cb0dcd.chunk.js",
+    "static/media/diploma.gif": "/Quiz/static/media/diploma.752ed4489fc6c714e2ff.gif",
+    "static/media/mouse.gif": "/Quiz/static/media/mouse.2f88ae64605f4d597ded.gif",
+    "static/media/hacker.gif": "/Quiz/static/media/hacker.1c958506512b997b8ecb.gif",
+    "static/media/idea.gif": "/Quiz/static/media/idea.87e03add658296c0eddb.gif",
+    "static/media/apple.gif": "/Quiz/static/media/apple.102095da09d8865b3c2d.gif",
+    "static/media/verified.gif": "/Quiz/static/media/verified.8592370a7c099585a0fb.gif",
+    "static/media/target.gif": "/Quiz/static/media/target.05949447d43425dd04e3.gif",
     "static/media/logo.svg": "/Quiz/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Quiz/index.html",
-    "main.5a30c095.css.map": "/Quiz/static/css/main.5a30c095.css.map",
-    "main.cbdea969.js.map": "/Quiz/static/js/main.cbdea969.js.map",
+    "main.94ab3dc4.css.map": "/Quiz/static/css/main.94ab3dc4.css.map",
+    "main.6e1139b1.js.map": "/Quiz/static/js/main.6e1139b1.js.map",
     "787.28cb0dcd.chunk.js.map": "/Quiz/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a30c095.css",
-    "static/js/main.cbdea969.js"
+    "static/css/main.94ab3dc4.css",
+    "static/js/main.6e1139b1.js"
   ]
 }
