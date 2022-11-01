@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import styles from "../App.css"
+import React, { useState } from 'react'
 import LinearProgress from '@mui/material/LinearProgress'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
@@ -20,14 +19,11 @@ const AllQuestions = ({ name, questions }) => {
     const resultGif = gif[randGif]
 
     return (
-      <div className="result">
-
-
+      <div className='result'>
         <img src={resultGif} />
-
-        <h2> Ваш результат: {correct} правильных ответов из {questions.length} </h2>
+        <h2> Your result is {correct} correct answers out of {questions.length} </h2>
         <a href="/Quiz">
-          <Button color='success' size='large' variant='contained'>Попробовать снова</Button>
+          <Button color='success' size='large' variant='contained'> Try again </Button>
         </a>
       </div>
     )
@@ -39,34 +35,33 @@ const AllQuestions = ({ name, questions }) => {
 
     return (
       <>
-        <div className="progress">
+        <div>
 
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{ width: '100%', mr: 1 }}>
-              <LinearProgress variant="determinate" 
-              value={percentage} 
-              color='success' 
-              sx={{height: 17, borderRadius: 6}} />
+              <LinearProgress variant='determinate'
+                value={percentage}
+                color='success'
+                sx={{ height: 17, borderRadius: 6 }} />
             </Box>
             <Box sx={{ minWidth: 35 }}>
-              <Typography variant="body2" color="text.secondary">{`${Math.round((step / questions.length) * 100)}%`}</Typography>
+              <Typography variant='body2'
+                color='text.secondary'>{`${Math.round((step / questions.length) * 100)}%`}
+              </Typography>
             </Box>
           </Box>
-
         </div>
         <h1>{question.title}</h1>
         <ul>
           {
             question.variants.map((text, index) => (
-              <li onClick={() => onClickVariant(index)} key={text}> {text}  </li>
+              <li onClick={() => onClickVariant(index)} key={text}> {text} </li>
             ))
           }
         </ul>
       </>
     )
   }
-
-
 
   const [step, setStep] = useState(0)
   const [correct, setCorrect] = useState(0)
@@ -81,7 +76,7 @@ const AllQuestions = ({ name, questions }) => {
   }
 
   return (
-    <div className="App">
+    <div className='App'>
       <h2>{name}</h2>
       {
         step !== questions.length
@@ -92,8 +87,6 @@ const AllQuestions = ({ name, questions }) => {
       }
     </div>
   )
-
-
 }
 export default AllQuestions
 

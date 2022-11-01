@@ -1,6 +1,6 @@
-import React from "react"
-import { useNavigate } from "react-router-dom"
-import s from "./App.css"
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import s from './App.css'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
 
