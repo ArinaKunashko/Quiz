@@ -19,6 +19,7 @@ body {
   background-color: #fff;
   position: relative;
 }
+
 .result {
   text-align: center;
 }
@@ -29,23 +30,6 @@ h1 {
   margin: 20px;
 }
   
-h2 {
-   margin-bottom: 40px ;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-  }
-li {
-      padding: 15px;
-      border: 2px solid rgba(0, 0, 0, 0.1);
-      border-radius: 15px;
-      margin-bottom: 10px;
-      cursor: pointer;
-      transition: all 0.1s ease-in-out;
-}
-
 img {
   width: 150px;
   filter: hue-rotate(277deg) saturate(0.5);

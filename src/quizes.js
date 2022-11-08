@@ -1,5 +1,8 @@
 export const jsQuiz = {
-    name: "Javascript Quiz",
+    title: 'JS',
+    position: 3,
+    path: '/jsQuestions',
+    name: 'Javascript Quiz',
     questions   : [  
         {
         title: 'Что выведет alert? let str = "Hello"; str.something = 5; alert(str.something); // ?',
@@ -380,7 +383,10 @@ export const jsQuiz = {
 }
 
 export const htmlQuiz = {
-    name: "HTML Quiz",
+    title: 'HTML',
+    position: 1,
+    path: '/htmlQuestions',
+    name: 'HTML Quiz',
     questions   : [ 
       {
         title: 'Как расшифровывается аббревиатура HTML? ',
@@ -542,7 +548,10 @@ export const htmlQuiz = {
 }
 
 export const cssQuiz = {
-    name: "CSS Quiz",
+    title: 'CSS',
+    position: 2,
+    path: '/cssQuestions',
+    name: 'CSS Quiz',
     questions   : [
         {
         title: 'Как расшифровывается css?',
@@ -710,9 +719,11 @@ export const cssQuiz = {
     ]
 }
 
-
 export const reactQuiz = {
-    name: "React Quiz",
+    title: 'React',
+    position: 4,
+    path: '/reactQuestions',
+    name: 'React Quiz',
     questions   : [ {
         title: 'Где правильно передана функция в качестве свойства?',
         variants:
@@ -825,21 +836,11 @@ export const reactQuiz = {
       {
         title: 'Какой метод вызывается в React Component после того, как компонент отображается в первый раз?',
         variants:
-          ['ReactDOM',
-            'react',
-            'print',
-            'console',
-            'render'],
-        correct: 4,
-      },
-      {
-        title: 'Какой метод отвечает за вывод информации через React JS компонент?',
-        variants:
           ['componentDidUpdate',
             'componentDidMount',
             'componentMounted',
             'componentUpdated',
-          ],
+            ],
         correct: 1,
       },
       {
@@ -1082,10 +1083,10 @@ export const reactQuiz = {
         title: 'Единственный обязательный метод в классовом компоненте?',
         variants:
           ['render()',
-            'componentDidMount',
-            'mapStateToProps',
-            'mapDispatchToProps',
-            'componentDidUpdate'
+            'componentDidMount()',
+            'mapStateToProps()',
+            'mapDispatchToProps()',
+            'componentDidUpdate()'
           ],
         correct: 0,
       },
@@ -1093,9 +1094,9 @@ export const reactQuiz = {
       {
         title: 'Этот метод жизненного цикла вызывается при удалении компонента из DOM.',
         variants:
-          ['componentDidMount',
-            'coomponentWillUnmount()',
-            'componentDidUpdate',
+          ['componentDidMount()',
+            'componentWillUnmount()',
+            'componentDidUpdate()',
             
           ],
         correct: 1,
@@ -1103,9 +1104,9 @@ export const reactQuiz = {
       {
         title: 'Этот метод жизненного цикла вызывается сразу после обновления. Не вызывается при первом рендере.  ?',
         variants:
-          ['componentDidUpdate',
-            'coomponentWillUnmount',
-            'componentDidMount',
+          ['componentDidUpdate()',
+            'componentWillUnmount()',
+            'componentDidMount()',
            
           ],
         correct: 0,
@@ -1114,9 +1115,9 @@ export const reactQuiz = {
       {
         title: 'Этот метод жизненного цикла вызывается сразу после монтирования(то есть вставки компонента в DOM). Это хорошее место для создания сетевых запросов.',
         variants:
-          ['coomponentWillUnmount()',
-            'componentDidUpdate',
-            'componentDidMount',
+          ['componentWillUnmount()',
+            'componentDidUpdate()',
+            'componentDidMount()',
             
           ],
         correct: 2,
@@ -1167,7 +1168,7 @@ export const reactQuiz = {
       },
       
       {
-        title: 'Что такое Селектор?',
+        title: 'Что такое Selector?',
         variants:
           ['Функция, которая отправляет action. Это единственный способ изменить state приложения. ',
             'Это объект, в котором инкапсулированны все данныы для того, что reducer получил эти данные и применил изменения на свой state ',

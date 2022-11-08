@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import LinearProgress from '@mui/material/LinearProgress'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
@@ -10,9 +11,15 @@ import gifVerified from '../assets/images/verified.gif'
 import gifIdea from '../assets/images/idea.gif'
 import gifDiploma from '../assets/images/diploma.gif'
 import gifMouse from '../assets/images/mouse.gif'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemText from '@mui/material/ListItemText'
+
+
 
 const AllQuestions = ({ name, questions }) => {
-
+  const navigate = useNavigate()
   const Result = ({ correct }) => {
     let gif = [gifTarget, gifApple, gifHacker, gifVerified, gifIdea, gifDiploma, gifMouse]
     let randGif = Math.floor(Math.random() * gif.length)
@@ -22,9 +29,7 @@ const AllQuestions = ({ name, questions }) => {
       <div className='result'>
         <img src={resultGif} />
         <h2> Your result is {correct} correct answers out of {questions.length} </h2>
-        <a href="/Quiz">
-          <Button color='success' size='large' variant='contained'> Try again </Button>
-        </a>
+        <Button variant="contained" color='success' size='large' onClick={() => navigate('/Quiz')}> Try again </Button>
       </div>
     )
   }
@@ -52,22 +57,25 @@ const AllQuestions = ({ name, questions }) => {
           </Box>
         </div>
         <h1>{question.title}</h1>
-        <ul>
+        <List>
           {
             question.variants.map((text, index) => (
-              <li onClick={() => onClickVariant(index)} key={text}> {text} </li>
+              <ListItem key={index} >
+                <ListItemButton onClick={() => onClickVariant(index)}
+                  sx={{ border: '1px solid #808080', borderRadius: '9px' }}>
+                  <ListItemText> {text} </ListItemText>
+                </ListItemButton>
+              </ListItem>
             ))
           }
-        </ul>
+        </List>
       </>
     )
   }
 
   const [step, setStep] = useState(0)
   const [correct, setCorrect] = useState(0)
-
   const question = questions[step]
-
   const onClickVariant = (index) => {
     setStep(step + 1)
     if (index == question.correct) {

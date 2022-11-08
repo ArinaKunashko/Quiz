@@ -3,21 +3,24 @@ import './App.css'
 import AllQuestions from './Themes/AllQuestions'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './Home'
-import { jsQuiz, htmlQuiz, reactQuiz, cssQuiz } from './quizes'
+import * as Quizes from './quizes'
 
 
-function AppJs () {
+
+function AppJs() {
+  const quizes = Object.values(Quizes)
+
   return (
- <BrowserRouter>
+    <BrowserRouter>
       <div className='app-wrapper'>
         <div className='app-wrapper-content'>
-            <Routes>
-              <Route path='/Quiz' element={<Home />} />
-              <Route path='/jsQuestions' element={<AllQuestions questions={jsQuiz.questions} name={jsQuiz.name} />} />
-              <Route path='/cssQuestions' element={<AllQuestions questions={cssQuiz.questions} name={cssQuiz.name} />} />
-              <Route path='/htmlQuestions' element={<AllQuestions questions={htmlQuiz.questions} name={htmlQuiz.name} />} />
-              <Route path='/reactQuestions' element={<AllQuestions questions={reactQuiz.questions} name={reactQuiz.name} />} />
-            </Routes>
+          <Routes>
+            <Route path='/Quiz' element={<Home />} />
+            {quizes.map(q => (
+              <Route key={q.path} path={q.path} element={<AllQuestions questions={q.questions} name={q.name} />} />
+            ))}
+
+          </Routes>
         </div>
       </div>
     </BrowserRouter>
