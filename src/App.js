@@ -28,4 +28,3 @@ function AppJs() {
 }
 
 export default AppJs
-

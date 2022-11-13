@@ -1,1209 +1,1088 @@
 export const jsQuiz = {
-    title: 'JS',
-    position: 3,
-    path: '/jsQuestions',
-    name: 'Javascript Quiz',
-    questions   : [  
-        {
-        title: 'Что выведет alert? let str = "Hello"; str.something = 5; alert(str.something); // ?',
-        variants:
-          ['5',
-            'undefined',
-            'Будет ошибка',
-            ],
-        correct: 2,
-      },
-      {
-        title: 'Что выведет этот скрипт? "use strict"; a = null + undefined; alert(a);',
-        variants:
-          ['null',
-            'undefined',
-            'NaN',
-            'В коде ошибка',
+  title: 'JS',
+  position: 3,
+  path: '/jsQuestions',
+  name: 'Javascript Quiz',
+  questions: [
+    {
+      title: 'Inside which HTML element do we put the JavaScript?',
+      variants:
+        ['<script>',
+          '<javascript>',
+          '<scripting>',
+          '<js>',
         ],
-        correct: 3,
-      },
-      {
-        title: 'Что выведет этот код? if (function f(){}) { alert(typeof f); }',
-        variants:
-          ['undefined',
-            'function',
-            'null',
-            'object',
-            'В коде ошибка',
+      correct: 0,
+    },
+    {
+      title: 'What is the correct JavaScript syntax to change the content of the HTML element below? <p id="demo">This is a demonstration.</p>',
+      variants:
+        ['document.getElementById("demo").innerHTML = "Hello World!"; ',
+          'document.getElementByName("p").innerHTML = "Hello World!";',
+          '#demo.innerHTML = "Hello World!";',
+          'document.getElement("p").innerHTML = "Hello World!";',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Что выведет этот код? for(let i=0; i<10; i++) { setTimeout(function() { alert(i);  }, 100); }',
-        variants:
-          ['Числа от 0 до 9.',
-            'Числа от 0 до 10.',
-            '10 раз число 0.',
-            '10 раз число 10.',
-            'Ошибка: переменная не определена.',
+      correct: 0,
+    },
+    {
+      title: 'Where is the correct place to insert a JavaScript?',
+      variants:
+        ['The <body> section ',
+          'Both the <head> section and the <body> section are correct ',
+          'The <head> section',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Что делает оператор ===?',
-        variants:
-          ['Сравнивает по ссылке, а не по значению.',
-            'Сравнивает без приведения типа.',
-            'Нет такого оператора.',
-          
+      correct: 1,
+    },
+    {
+      title: 'What is the correct syntax for referring to an external script called "xxx.js"?',
+      variants:
+        ['<script href="xxx.js"> ',
+          '<script name="xxx.js">',
+          '<script src="xxx.js"> ',
         ],
-        correct: 1,
-      },
-      {
-        title: 'Что выведет этот код? let obj = { "0": 1,  0: 2 }; alert( obj["0"] + obj[0] );',
-        variants:
-          ['2',
-            '3',
-            '4',
-            '12',
-            'В коде ошибка',
+      correct: 2,
+    },
+    {
+      title: 'The external JavaScript file must contain the <script> tag.',
+      variants:
+        ['True',
+          'False ',
         ],
-        correct: 2,
-      },
-      {
-        title: 'Чему равно 2 && 1 && null && 0 && undefined ?',
-        variants:
-          ['2',
-            '1',
-            'null',
-            '0',
-            'undefined',
-            'false',
+      correct: 1,
+    },
+    {
+      title: 'How do you write "Hello World" in an alert box?',
+      variants:
+        ['alert("Hello World");',
+          'msgBox("Hello World");',
+          'msg("Hello World");',
+          'alertBox("Hello World");',
         ],
-        correct: 2,
-      },
-      {
-        title: 'Чему равно 0 || "" || 2 || undefined || true || falsе ?',
-        variants:
-          ['0',
-          '2',
-            'undefined',
-            'true',
-            'false',
+      correct: 0,
+    },
+    {
+      title: 'How do you create a function in JavaScript?',
+      variants:
+        ['function = myFunction()',
+          'function:myFunction()',
+          'function myFunction() ',
         ],
-        correct: 1,
-      },
-      {
-        title: 'Чему равен typeof null в режиме use strict?',
-        variants:
-          ['null',
-            'undefined',
-            'object',
-            'string',
+      correct: 2,
+    },
+    {
+      title: 'How do you call a function named "myFunction"?',
+      variants:
+        ['myFunction() ',
+          'call function myFunction()',
+          'call myFunction()',
         ],
-        correct: 2,
-      },
-      {
-        title: 'Какие конструкции для циклов есть в javascript?',
-        variants:
-          ['Только две: for и while ',
-            'Только одна: for.',
-            'Три: for, while и do...while',
-           
+      correct: 0,
+    },
+    {
+      title: 'How to write an IF statement in JavaScript?',
+      variants:
+        ['if (i == 5) ',
+          'if i = 5',
+          'if i = 5 then',
+          'if i == 5 then',
         ],
-        correct: 2,
-      },
-      {
-        title: 'Как расшифровывается JSON?',
-        variants:
-          ['JavaScript Object Notation ',
-            'JavaScript Object Native ',
-            'JavaScript Oriented Notation',
-            'JavaScript Object Notification',
+      correct: 0,
+    },
+    {
+      title: 'How to write an IF statement for executing some code if "i" is NOT equal to 5?',
+      variants:
+        ['if (i != 5) ',
+          'if i =! 5 then',
+          'if (i <> 5)',
+          'if i <> 5',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Зачем нужен JSON ?',
-        variants:
-          ['Формат JSON используется для упорядоченного хранения данных в процессе их обмена между веб-браузером или клиентской частью приложения и сервером или между разными серверами. Более того, благодаря текстовому виду строки, данные JSON можно легко передавать через любые другие каналы обмена информацией в интернете.          ',
-            'Технология позволяет получать и модифицировать данные и состояния удаленных приложений, передавая HTTP-вызовы через интернет или любую другую сеть.            ',
-            'Формат JSON используется для создания интерфейсов одностраничных и многостраничных приложений, разработки крупных сайтов.            ',
-            'Формат JSON используется для избавления от ошибок, связанных с беспорядком в объекте состояния; предсказуемости и понятности работы приложения; более простой отладки и доработки; повышения производительности и работоспособности программы.            ',
+      correct: 0,
+    },
+    {
+      title: 'How does a WHILE loop start?',
+      variants:
+        ['while (i <= 10; i++) ',
+          'while (i <= 10) ',
+          'while i = 1 to 10',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Что такое REST API  ?',
-        variants:
-          ['Технология позволяет упорядоченно хранить данные в процессе их обмена между веб-браузером или клиентской частью приложения и сервером или между разными серверами.           ',
-            'Технология позволяет получать и модифицировать данные и состояния удаленных приложений, передавая HTTP-вызовы через интернет или любую другую сеть.            ',
-            'Технология позволяет создавать интерфейсы одностраничных и многостраничных приложений, разработки крупных сайтов.            ',
-            'Технология позволяет избавлять от ошибок, связанных с беспорядком в объекте состояния; предсказуемости и понятности работы приложения; более простой отладки и доработки; повышения производительности и работоспособности программы.            ',
+      correct: 1,
+    },
+    {
+      title: 'How does a FOR loop start?',
+      variants:
+        ['for (i = 0; i <= 5; i++)',
+          'for (i <= 5; i++)',
+          'for i = 1 to 5',
+          'for (i = 0; i <= 5)',
         ],
-        correct: 1,
-      },
-      {
-        title: 'Поддерживают ли JSON все платформы? ',
-        variants:
-          ['Поддерживают почти все платформы благодаря своему текстовому формату  ',
-            'Поддерживают почти все платформы благодаря преобразованию код в числа  ',
-            'Очень мало платформ поддерживает JSON  ',
+      correct: 0,
+    },
+    {
+      title: 'How can you add a comment in a JavaScript?',
+      variants:
+        ['//This is a comment ',
+          '"This is a comment"',
+          '<!--This is a comment--> ',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Как был построен JSON?',
-        variants:
-          ['JSON построен на двух структурах, которые представляют собой набор пар имя / значение и упорядоченный список значений. Это универсальные структуры данных, такие как объект, массив, строка, число и значение.          ',
-            'JSON построен на одной структуре данных - объект  ',
-            'JSON построен на трех структурах, которые представляют собой набор пар имя / значение, свойство и упорядоченный список значений . Это универсальные структуры данных, такие как объект, массив, строка, число и значение.',
-        
+      correct: 1,
+    },
+    {
+      title: 'How to insert a comment that has more than one line?',
+      variants:
+        ['<!--This comment has more than one line-->  ',
+          '/*This comment has more than one line*/  ',
+          '//This comment has more than one line//',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Какое из утверждений правильное',
-        variants:
-          ['JSON быстрее и легче XML.JSON имеет типизированные объекты, тогда как в XML-объектах обычно меньше.В JSON существуют разные типы объектов, такие как целое число, строка, массив и т. Д., Тогда как в XML есть только один тип объекта, который является только String.Данные JSON могут быть легко доступны или доступны как объект JSON, используя в JavaScript, но в XML данные должны быть проанализированы и распределены по переменным с помощью API.В JSON получить значения так же просто, как прочитать их из свойства объекта из кода javascript.          ',
-            'XML быстрее и легче JSON.JSON имеет типизированные объекты, тогда как в XML-объектах обычно меньше.В XML существуют разные типы объектов, такие как целое число, строка, массив и т. Д., Тогда как в JSON есть только один тип объекта, который является только String.Данные JSON могут быть легко доступны или доступны как объект JSON, используя в JavaScript, но в XML данные должны быть проанализированы и распределены по переменным с помощью API.В XML получить значения так же просто, как прочитать их из свойства объекта из кода javascript.',
-           
+      correct: 1,
+    },
+    {
+      title: 'What is the correct way to write a JavaScript array?',
+      variants:
+        ['var colors = ["red", "green", "blue"] ',
+          'var colors = "red", "green", "blue"',
+          'var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")',
+          'var colors = (1:"red", 2:"green", 3:"blue")',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Какие методы предоставляет JavaScript в JSON?',
-        variants:
-          ['JavaScript предоставляет методы JSON.stringify для сериализации в JSON и JSON.parse для чтения из JSON.    ',
-            'JavaScript предоставляет методы JSON.object для преобразования в объект и JSON.parse для чтения из JSON.   ',
-            'JavaScript предоставляет методы JSON.object для преобразования в объект и JSON.stringify для сериализации в JSON.',
-           
+      correct: 0,
+    },
+    {
+      title: 'How do you round the number 7.25, to the nearest integer?',
+      variants:
+        ['Math.round(7.25) ',
+          'Math.rnd(7.25) ',
+          'round(7.25)',
+          'rnd(7.25)',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Что такое рекурсия? ',
-        variants:
-          ['Это вызов функции самой себя, без выхода из функции  ',
-            'Это вызов функции самой себя, должен быть обязательно выход из функции (return)   ',
-            'Это функция, которая запоминает свои внешние переменные и может получить к ним доступ. ',
-            'Это вызов функцией другой функции',
+      correct: 0,
+    },
+    {
+      title: 'How do you find the number with the highest value of x and y?',
+      variants:
+        ['Math.max(x, y) ',
+          'Math.ceil(x, y) ',
+          'top(x, y)',
+          'ceil(x, y)',
         ],
-        correct: 1,
-      },
-      {
-        title: 'Определение какого термина дано? Это специальная внутренняя структура данных, которая содержит информацию о вызове функции. Она включает в себя конкретное место в коде, на котором находится интерпретатор, локальные переменные функции, значение this и прочую служебную информацию.  ',
-        variants:
-          ['Рекурсия ',
-            'Стек',
-            'Контекст выполнения',
-            'Лексическое окружение',
+      correct: 0,
+    },
+    {
+      title: 'What is the correct JavaScript syntax for opening a new window called "w2" ? ',
+      variants:
+        ['w2 = window.new("http://www.w3schools.com"); ',
+          'w2 = window.open("http://www.w3schools.com"); ',
         ],
-        correct: 2,
-      },
-      {
-        title: 'Какие методы предоставляет JavaScript в JSON?',
-        variants:
-        ['Рекурсия ',
-        'Стек',
-        'Контекст выполнения',
-        'Лексическое окружение',
-    ],
-        correct: 0,
-      },
-      {
-        title: 'Что такое итерация?',
-        variants:
-        ['Организация обработки данных, при котором действия повторяются многократно, не приводя при этом к вызовам самих себя ',
-        'Организация обработки данных, при котором действия повторяются многократно, приводящим при этом к вызовам самих себя',
-        'Это возможность функции получить доступ к внешним данным',
-        'Это вызов функцией другой функции ',
-    ],
-        correct: 0,
-      },
-      {
-        title: 'Выберете правильные утверждения про «остаточные параметры» … ?',
-        variants:
-        ['Остаточные параметры «…» располагаются в конце списка аргументов функции. Он собирает остальные неуказанные аргументы и делает из них массив.  ',
-        'Остаточные параметры «…» располагаются в начале списка аргументов функции. Он собирает остальные неуказанные аргументы и делает из них массив.        ',
-        'Остаточные параметры «…» встречаются в вызове функции или где-либо ещё. Он извлекает элементы из массива.',
-        
-    ],
-        correct: 0,
-      },
-      {
-        title: 'Выберете правильное утверждение про «оператор расширения»?',
-        variants:
-        ['Оператор расширения «…» располагаются в конце списка аргументов функции. Он собирает остальные неуказанные аргументы и делает из них массив.        ',
-        'Оператор расширения «…» располагаются в начале списка аргументов функции. Он собирает остальные неуказанные аргументы и делает из них массив.        ',
-        'Оператор расширения «…» встречается в вызове функции или где-либо ещё. Он извлекает элементы из массива.',
-    ],
-        correct: 2,
-      },
-      {
-        title: 'Выберите правильное утверждение  ',
-        variants:
-        ['Остаточные параметры используются, чтобы создавать новые функции с неопределённым числом аргументов ',
-        'С помощью остаточных параметров можно вставить массив в функцию, которая по умолчанию работает с обычным списком аргументов. ',
-    ],
-        correct: 0,
-      },
-      {
-        title: 'Выберите правильное утверждение  ',
-        variants:
-        ['Операторы расширения используются, чтобы создавать новые функции с неопределённым числом аргументов ',
-        'С помощью операторов расширения можно вставить массив в функцию, которая по умолчанию работает с обычным списком аргументов. ',
-    ],
-        correct: 1,
-      },
-      {
-        title: 'Список событий, подлежащих обработке формируют очередь событий. Когда стек освобождается, движок может обрабатывать событие из очереди. Где координируется этот процесс ?   ',
-        variants:
-        ['Нигде, события могут обрабатываться одновременно',
-        'В цикле событий (event loop)',
-        'В замыкании',
-        'В стеке',
-    ],
-        correct: 1,
-      },
-      {
-        title: 'Назовите типы данных в Java Script ?',
-        variants:
-        ['Примитивные : Boolean, null, underfined, number, string, array, symbol Непримитивные: function , object ',
-        ' Примитивные : Boolean, null, undefined, number, string, array, bigint, symbol. Непримитивные: object, function ',
-        'Примитивные : Boolean, null, underfined, number, string, array, bigint, symbol, object Непримитивные: function  ',
-        'Примитивные : Boolean, null, underfined, number, string, array, symbol, object Непримитивные: function  ',
-    ],
-        correct: 1,
-      },
-      {
-        title: 'Чем отличается null от undefined ?',
-        variants:
-        ['Null обозначает нулевое или «пустое» значение. Undefined - свойство глобального объекта; переменная, не имеющая присвоенного значения    ',
-        'Undefined обозначает нулевое или «пустое» значение. Null - свойство глобального объекта; переменная, не имеющая присвоенного значения   ',
-    ],
-        correct: 0,
-      },
-      {
-        title: 'Про какую переменную идет речь? Переменные ... не имеют блочной области видимости, они ограничены, как минимум, телом функции. Объявления (инициализация) переменных ... производится в начале исполнения функции (или скрипта для глобальных переменных).',
-        variants:
-          ['let ',
-            'var',
-            'const',
-            'Подходит ко всем',
+      correct: 1,
+    },
+    {
+      title: 'JavaScript is the same as Java.',
+      variants:
+        ['False',
+          'True',
         ],
-        correct: 1,
-      },
-      
-      {
-        title: 'Что такое Замыкание?',
-        variants:
-          ['Замыкание – это функция, которая запоминает свои внешние переменные и может получить к ним доступ. Все функции в JavaScript являются замыканиями. ',
-            'Замыкание — это вызов функцияей самой себя  ',
-            'Замыкание — это возможность оборачивать компоненту и следить за входящими пропсами  ',
-            'Замыкание — функция, которая ссылается на свободные переменные в области видимости другой функции ',
+      correct: 0,
+    },
+    {
+      title: 'How can you detect the client is browser name?',
+      variants:
+        ['browser.name',
+          'client.navName',
+          'navigator.appName',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Что такое IIFE «immediately-invoked function expressions»',
-        variants:
-          ['Вызов функции самой себя',
-            'Функция, запускаемая сразу после объявления',
+      correct: 2,
+    },
+    {
+      title: 'Which event occurs when the user clicks on an HTML element?',
+      variants:
+        ['onclick',
+          'onchange',
+          'onmouseclick',
+          'onmouseover',
         ],
-        correct: 1,
-      },
-      {
-        title: 'В чем отличие Function Expression от Function Declaration?',
-        variants:
-          ['Function Expression  – функция, объявленная в основном потоке кода, они создаются интерпретатором до выполнения кода.. Function Declaration – объявление функции в контексте какого-либо выражения, например присваивания.    ',
-            'Function Declaration – функция, объявленная в основном потоке кода, они создаются интерпретатором до выполнения кода.. Function Expression – объявление функции в контексте какого-либо выражения, например присваивания.        ',
-        ],
-        correct: 1,
-      },
-      {
-        title: 'Зачем нужен метод функции apply? ',
-        variants:
-          ['Метод apply() вызывает функцию с указанным значением this и аргументами, предоставленными в виде массива (либо массивоподобного объекта (en-US)).     ',
-            'Метод apply() создаёт новую функцию, которая при вызове устанавливает в качестве контекста выполнения this предоставленное значение. В метод также передаётся набор аргументов, которые будут установлены перед переданными в привязанную функцию аргументами при её вызове.            ',
-            'Метод apply() вызывает функцию с указанным значением this и индивидуально предоставленными аргументами.  ',
-            'Метод apply декомпилирует функцию и возвращает строку, включающую ключевое слово function, список аргументов, фигурные скобки и исходный код тела функции.',
-        ],
-        correct: 0,
-      },
-      {
-        title: 'Зачем нужен метод функции bind?',
-        variants:
-          ['Метод bind() вызывает функцию с указанным значением this и аргументами, предоставленными в виде массива (либо массивоподобного объекта (en-US)).   ',
-            'Метод bind() создаёт новую функцию, которая при вызове устанавливает в качестве контекста выполнения this предоставленное значение. В метод также передаётся набор аргументов, которые будут установлены перед переданными в привязанную функцию аргументами при её вызове.   ',
-            'Метод bind() вызывает функцию с указанным значением this и индивидуально предоставленными аргументами. ',
-            'Метод bind декомпилирует функцию и возвращает строку, включающую ключевое слово function, список аргументов, фигурные скобки и исходный код тела функции.',
-        ],
-        correct: 1,
-      },
-      {
-        title: 'Зачем нужен метод функции call?',
-        variants:
-          ['Метод call() вызывает функцию с указанным значением this и аргументами, предоставленными в виде массива (либо массивоподобного объекта (en-US)).   ',
-            'Метод call() создаёт новую функцию, которая при вызове устанавливает в качестве контекста выполнения this предоставленное значение. В метод также передаётся набор аргументов, которые будут установлены перед переданными в привязанную функцию аргументами при её вызове.   ',
-            'Метод call() вызывает функцию с указанным значением this и индивидуально предоставленными аргументами. ',
-            'Метод call декомпилирует функцию и возвращает строку, включающую ключевое слово function, список аргументов, фигурные скобки и исходный код тела функции. ',
-        ],
-        correct: 2,
-      },
-      {
-        title: 'Зачем нужен метод функции toString?',
-        variants:
-          ['Метод toString() вызывает функцию с указанным значением this и аргументами, предоставленными в виде массива (либо массивоподобного объекта (en-US)). ',
-            'Метод toString() создаёт новую функцию, которая при вызове устанавливает в качестве контекста выполнения this предоставленное значение. В метод также передаётся набор аргументов, которые будут установлены перед переданными в привязанную функцию аргументами при её вызове.  ',
-            'Метод toString() вызывает функцию с указанным значением this и индивидуально предоставленными аргументами.  ',
-            'Метод toString декомпилирует функцию и возвращает строку, включающую ключевое слово function, список аргументов, фигурные скобки и исходный код тела функции.',
-        ],
-        correct: 3,
-      },
+      correct: 0,
+    },
+    {
+      title: 'How do you declare a JavaScript variable?',
+      variants:
+        ['var carName;',
+          'v carName;',
+          'variable carName;',
 
-
-
-
-
-
-
-
-
-      {
-        title: 'Какое из утверждений правильное',
-        variants:
-          ['null',
-            'undefined',
-            'NaN',
-            'В коде ошибка',
         ],
-        correct: 3,
-      },
-
-
-    
-    ]
+      correct: 0,
+    },
+    {
+      title: 'Which operator is used to assign a value to a variable?',
+      variants:
+        ['= ',
+          'x',
+          '*',
+          '-',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'What will the following code return: Boolean(10 > 9)',
+      variants:
+        ['NaN ',
+          'true ',
+          'false ',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'Is JavaScript case-sensitive?',
+      variants:
+        ['Yes',
+          'No',
+        ],
+      correct: 0,
+    },
+  ]
 }
 
 export const htmlQuiz = {
-    title: 'HTML',
-    position: 1,
-    path: '/htmlQuestions',
-    name: 'HTML Quiz',
-    questions   : [ 
-      {
-        title: 'Как расшифровывается аббревиатура HTML? ',
-        variants:
-          ['Hyper Text Modul Language',
-            'Hyper Text Markup Language',
-            'Hyper Test Markup Language',
-            'Hyperlink Markup Language',
-            ],
-        correct: 1,
-      },
-      {
-        title: 'Какой из следующих тегов table используется для создания строки таблицы?',
-        variants:
-          ['<th>',
-            '<td>',
-            '<tr>',
-            '<table>',
-            ],
-        correct: 2,
-      },
-      {
-        title: 'Какой из следующих вариантов не является HTML атрибутом?',
-        variants:
-          ['alt',
-            'target',
-            'fontSize',
-            'id',
-            ],
-        correct: 2,
-      },
-      {
-        title: 'Какую разметку необходимо использовать для создания упорядоченного списка?',
-        variants:
-          ['<ul>',
-            '<ol>',
-            ],
-        correct: 1,
-      },
-      {
-        title: 'Какой необязательный тег table используется для добавления краткого описания наверху таблицы?        ',
-        variants:
-          ['description',
-            'caption',
-            'title',
-            
-            ],
-        correct: 1,
-      },
-      {
-        title: 'Какой HTML form input используется для представления нескольких вариантов с возможностью выбора только одного из них?',
-        variants:
-          ['<input type="text">',
-            '<input type="radio">',
-            '<input type="checkbox">',
-            
-            ],
-        correct: 1,
-      },
-      {
-        title: 'Какой HTML form input используется для отправки на сервер информацию о form?',
-        variants:
-          ['<input type="server">',
-            '<input type="submit">',
-            '<input type="send">',
-            '<input type="mail">  ',
-            ],
-        correct: 1,
-      },
-      {
-        title: 'Какую разметку необходимо использовать для создания неупорядоченного списка?        ',
-        variants:
-          ['<ul>',
-            '<ol>',
-            '<li>',
-            
-            ],
-        correct: 0,
-      },
-      {
-        title: 'Можно ли использовать table(таблицу) внутри table?',
-        variants:
-          ['Да',
-            'Нет',
-          
-            ],
-        correct: 0,
-      },
-      {
-        title: 'Какой элемент не имеет закрывающий тег?',
-        variants:
-          ['tag',
-            'empty tag',
-            'closed tag ',
-            ],
-        correct: 1,
-      },
-      {
-        title: 'Какой из следующих тегов table используется для создания ячеек table data?',
-        variants:
-          ['<td>',
-            '<th>',
-            '<tr>',
-            '<table>',
-            ],
-        correct: 0,
-      },
-      {
-        title: 'Какой элемент не является пустым?',
-        variants:
-          ['<br />',
-            '<p>',
-            '<img />',
-            '<hr />',
-            ],
-        correct: 1,
-      },
-      {
-        title: 'Какой тег указывает поле form, где пользователь может ввести больше текста? ',
-        variants:
-          ['<textarea>',
-            '<button> ',
-            '<a>',
-            '<label>',
-            ],
-        correct: 0,
-      },
-      {
-        title: 'Чем отличие <header> от <head>? ',
-        variants:
-          ['<head></head> это блок служебной информации внутри которого располагаются теги с описанием страницы и ключевыми словами (теги meta), заголовок страницы (тег title) и подключение внешних стилей (тег link), которая непосредственно на странице не отображается. Располагается он между <html> и <body>. А тег <header></header> - это новый тег стандарта html5, находится непосредственно внутри <body></body>, содержимое его отображается на сайте и служит т.н. логической "шапкой" сайта, внутри которого размещается логотип и т.п. ',
-            '<header></header> это блок служебной информации внутри которого располагаются теги с описанием страницы и ключевыми словами (теги meta), заголовок страницы (тег title) и подключение внешних стилей (тег link), которая непосредственно на странице не отображается. Располагается он между <html> и <body>. А тег <head></head> - это новый тег стандарта html5, находится непосредственно внутри <body></body>, содержимое его отображается на сайте и служит т.н. логической "шапкой" сайта, внутри которого размещается логотип и т.п.             ',
-         
-            ],
-        correct: 0,
-      },
-      {
-        title: 'Назовите теги HTML? ',
-        variants:
-          ['<borge>/<border>, <html></html>, <head></head>, <body></body>',
-            '<grid></grid>, <html>/<html>, <body></body>, <title>/<title>',
-            '<html></html>, <head></head>, <body></body>, <title></title>',
-            '<html></html>, <head></head>, <title></title>, <flex></flex>       ',
-            ],
-        correct: 2,
-      },
-      {
-        title: 'Чем отличается Элемент от Тега ? ',
-        variants:
-          ['Это одно и тоже   ',
-            'Теги открывают или закрывают элементы в исходном коде, тогда как элементы являются частью DOM, объектной моделью документа для отображения страницы в браузере. ',
-            'Элементы открывают или закрывают теги в исходном коде, тогда как теги являются частью DOM, объектной моделью документа для отображения страницы в браузере.  ',
-            
-            ],
-        correct: 1,
-      },
+  title: 'HTML',
+  position: 1,
+  path: '/htmlQuestions',
+  name: 'HTML Quiz',
+  questions: [
+    {
+      title: 'What does HTML stand for?',
+      variants:
+        ['Hyper Text Modul Language',
+          'Hyper Text Markup Language',
+          'Hyper Test Markup Language',
+          'Hyperlink Markup Language',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'Who is making the Web standards?',
+      variants:
+        ['Google',
+          'The World Wide Web Consortium',
+          'Mozilla',
+          'Microsoft',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'Choose the correct HTML element for the largest heading:',
+      variants:
+        ['<head> ',
+          '<h1>',
+          '<h6>',
+          '<heading>',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'What is the correct HTML element for inserting a line break?',
+      variants:
+        ['<break>',
+          '<lb>',
+          '<br>',
+        ],
+      correct: 2,
+    },
+    {
+      title: 'What is the correct HTML for adding a background color?',
+      variants:
+        ['<body style="background-color:yellow;">',
+          '<body bg="yellow">',
+          '<background>yellow</background>',
+
+        ],
+      correct: 0,
+    },
+    {
+      title: 'Choose the correct HTML element to define important text',
+      variants:
+        ['<important>',
+          '<i>',
+          '<strong> ',
+          '<b>',
+        ],
+      correct: 2,
+    },
+    {
+      title: 'Choose the correct HTML element to define emphasized text',
+      variants:
+        ['<em>',
+          '<i>',
+          '<italic> ',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'What is the correct HTML for creating a hyperlink?',
+      variants:
+        ['<a href="http://www.w3schools.com">W3Schools</a> ',
+          '<a name="http://www.w3schools.com">W3Schools.com</a>',
+          '<a url="http://www.w3schools.com">W3Schools.com</a>',
+          '<a>http://www.w3schools.com</a>',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'Which character is used to indicate an end tag?',
+      variants:
+        ['/ ',
+          '*',
+          '^',
+          '<',
+
+        ],
+      correct: 0,
+    },
+    {
+      title: 'How can you open a link in a new tab/browser window?',
+      variants:
+        ['<a href="url" target="new">',
+          '<a href="url" new>',
+          '<a href="url" target="_blank"> ',
+        ],
+      correct: 2,
+    },
+    {
+      title: 'Which of these elements are all <table> elements?',
+      variants:
+        ['<table><tr><td>',
+          '<table><tr><tt>',
+          '<thead><body><tr>',
+          '<table><head><tfoot>',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'Inline elements are normally displayed without starting a new line.',
+      variants:
+        ['True',
+          'False',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'How can you make a numbered list?',
+      variants:
+        ['<ul>',
+          '<ol> ',
+          '<dl>',
+          '<list>',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'How can you make a bulleted list?',
+      variants:
+        ['<ol>',
+          '<dl>',
+          '<list>',
+          '<ul>',
+        ],
+      correct: 3,
+    },
+    {
+      title: 'What is the correct HTML for making a checkbox?',
+      variants:
+        ['<input type="checkbox">',
+          '<input type="check">',
+          '<checkbox>',
+          '<check>',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'What is the correct HTML for making a text input field?',
+      variants:
+        ['<input type="text">',
+          '<textinput type="text">',
+          '<textfield>',
+          '<input type="textfield">',
+        ],
+      correct: 0,
+    },
+
+    {
+      title: 'What is the correct HTML for making a drop-down list?',
+      variants:
+        ['<list>',
+          '<input type="dropdown">',
+          '<input type="list">',
+          '<select>',
+        ],
+      correct: 3,
+    },
+
+    {
+      title: 'What is the correct HTML for making a text area?',
+      variants:
+        ['<textarea>',
+          '<input type="textbox">',
+          '<input type="textarea">',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'What is the correct HTML for inserting an image?',
+      variants:
+        ['<img src="image.gif" alt="MyImage">',
+          '<img alt="MyImage">image.gif</img>',
+          '<image src="image.gif" alt="MyImage">',
+          '<img href="image.gif" alt="MyImage">',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'What is the correct HTML for inserting a background image?',
+      variants:
+        ['<body style="background-image:url(background.gif)"> ',
+          '<background img="background.gif">',
+          '<body bg="background.gif">',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'An <iframe> is used to display a web page within a web page.',
+      variants:
+        ['False',
+          'There is no such thing as an <iframe>',
+          'True',
+        ],
+      correct: 2,
+    },
+    {
+      title: 'HTML comments start with <!-- and end with -->',
+      variants:
+        ['<False ',
+          '<textinput type="text">',
+          '<textfield>',
+          '<input type="textfield">',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'Block elements are normally displayed without starting a new line.',
+      variants:
+        ['False',
+          'True',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'Which HTML element defines the title of a document?',
+      variants:
+        ['<title>',
+          '<head>',
+          '<meta>',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?',
+      variants:
+        ['src',
+          'title',
+          'alt',
+          'longdesc',
+        ],
+      correct: 2,
+    },
+    {
+      title: 'Which doctype is correct for HTML5?',
+      variants:
+        ['<!DOCTYPE HTML5>',
+          '<!DOCTYPE html>',
+          '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5.0//EN" "http://www.w3.org/TR/html5/strict.dtd">',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'Which HTML element is used to specify a footer for a document or section?',
+      variants:
+        ['<footer>',
+          '<bottom>',
+          '<section>',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'In HTML, you can embed SVG elements directly into an HTML page.',
+      variants:
+        ['True',
+          'False',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'What is the correct HTML element for playing video files?',
+      variants:
+        ['<media>',
+          '<video> ',
+          '<movie>',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'What is the correct HTML element for playing audio files?',
+      variants:
+        ['<mp3>',
+          '<sound>',
+          '<audio> ',
+        ],
+      correct: 2,
+    },
+    {
+      title: 'The HTML global attribute, "contenteditable" is used to:',
+      variants:
+        ['Update content from the server ',
+          'Return the position of the first found occurrence of content inside a string',
+          'Specifies a context menu for an element. The menu appears when a user right-clicks on the element',
+          'Specify whether the content of an element should be editable or not',
+        ],
+      correct: 3,
+    },
+    {
+      title: 'In HTML, onblur and onfocus are:',
+      variants:
+        ['Event attributes',
+          'Style attributes',
+          'HTML elements',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'Graphics defined by SVG is in which format?',
+      variants:
+        ['CSS',
+          'XML',
+          'HTML',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'The HTML <canvas> element is used to:',
+      variants:
+        ['draw graphics',
+          'manipulate data in MySQL',
+          'display database records',
+          'create draggable elements',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'In HTML, which attribute is used to specify that an input field must be filled out?',
+      variants:
+        ['required',
+          'placeholder',
+          'validate',
+          'formvalidate',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'Which input type defines a slider control?',
+      variants:
+        ['slider',
+          'controls',
+          'search',
+          'range ',
+        ],
+      correct: 3,
+    },
+    {
+      title: 'Which HTML element is used to display a scalar measurement within a range?',
+      variants:
+        ['<range>',
+          '<meter> ',
+          '<measure>',
+          '<gauge>',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'Which HTML element defines navigation links?',
+      variants:
+        ['<navigate> ',
+          '<navigation>',
+          'Specifies a context menu for an element. The menu appears when a user right-clicks on the element',
+          'Specify whether the content of an element should be editable or not',
+        ],
+      correct: 2,
+    },
+    {
+      title: 'In HTML, what does the <aside> element define?',
+      variants:
+        ['Content aside from the page content',
+          'A navigation list to be shown at the left side of the page',
+          'The ASCII character-set; to send information between computers on the Internet',
+        ],
+      correct: 3,
+    },
+    {
+      title: 'Which HTML element is used to specify a header for a document or section?',
+      variants:
+        ['<head>',
+          '<section>',
+          '<header>',
+          '<top>',
+        ],
+      correct: 2,
+    },
     
-    ]
+  ]
 }
 
 export const cssQuiz = {
-    title: 'CSS',
-    position: 2,
-    path: '/cssQuestions',
-    name: 'CSS Quiz',
-    questions   : [
-        {
-        title: 'Как расшифровывается css?',
-        variants:
-          ['Cascading Style Sheets',
-            'Cascading Style Statement',
-            'Cascading Style Stage',
+  title: 'CSS',
+  position: 2,
+  path: '/cssQuestions',
+  name: 'CSS Quiz',
+  questions: [
+    {
+      title: 'What does CSS stand for?',
+      variants:
+        ['Colorful Style Sheets ',
+          'Computer Style Sheets',
+          'Creative Style Sheets',
+          'Cascading Style Sheets ',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Что такое Специфичность в css?',
-        variants:
-          ['Специфичность - это способ, с помощью которого браузеры определяют, какие значения свойств CSS наиболее соответствуют элементу и, следовательно, будут применены.',
-            'Специфичность - идентификатор действия, которое будет применено к элементу',
-            'Специфичность описывает как именно свойство будет обработано браузером',
+      correct: 3,
+    },
+    {
+      title: 'What is the correct HTML for referring to an external style sheet?',
+      variants:
+        ['<link rel="stylesheet" type="text/css" href="mystyle.css">  ',
+          '<style src="mystyle.css">',
+          '<stylesheet>mystyle.css</stylesheet>',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Дайте опредление CSS',
-        variants:
-          ['CSS - это код, который используется для структурирования и отображения веб-страницы и её контента.  ',
-            'CSS - "каскадные таблицы стилей", формальный язык описания внешнего вида документа, написанного с использованием языка разметки.',
-            'CSS - это язык разметки, который мы используем для визуального и смыслового структурирования нашего web контента',
+      correct: 0,
+    },
+    {
+      title: 'Where in an HTML document is the correct place to refer to an external style sheet?',
+      variants:
+        ['At the end of the document  ',
+          'In the <head> section  ',
+          'In the <body> section',
         ],
-        correct: 1,
-      },
-      {
-        title: 'В CSS мы, говоря упрощённо, имеем два типа элементов. Каких? ',
-        variants:
-          ['Изображения и объекты',
-            'Блочный и строчный',
-            'Скрипты и списки',
-            'Формы и объекты ',
+      correct: 1,
+    },
+    {
+      title: 'Which HTML tag is used to define an internal style sheet?',
+      variants:
+        ['<style>',
+          '<css>',
+          '<script>',
         ],
-        correct: 1,
-      },
-      {
-        title: 'Какой тип элемента в css описан? "Начнётся с новой строки.Будет расширяться вдоль строки таким образом, чтобы заполнить всё пространство, доступное в её контейнере. В большинстве случаев это означает, что блок станет такой же ширины, как и его контейнер, заполняя 100% доступного пространства.Будут применяться свойства width и height. Внешние и внутренние отступы, рамка будут отодвигать от него другие элементы."',
-        variants:
-          ['Форма',
-            'Объект ',
-            'Блочный',
-            'Строка',
+      correct: 0,
+    },
+    {
+      title: 'Which HTML attribute is used to define inline styles?',
+      variants:
+        ['style ',
+          'styles ',
+          'font',
+          'class',
         ],
-        correct: 2,
-      },
-      {
-        title: 'Какой тип элемента в css описан? "Он не будет начинаться с новой строки. Свойства width и height не будут применяться. Вертикальные внешние и внутренние отступы, рамки будут применяться, но не будут отодвигать другие строчные элементы. Горизонтальные внешние и внутренние отступы, рамки будут применяться и будут отодвигать другие строчные элементы."',
-        variants:
-          ['Форма',
-            'Объект',
-            'Блок',
-            'Строчный',
+      correct: 0,
+    },
+    {
+      title: 'Which is the correct CSS syntax?',
+      variants:
+        ['{body:color=black;} ',
+          '{body;color:black;}',
+          'body:color=black;',
+          'body {color: black;}',
         ],
-        correct: 3,
-      },
-      {
-        title: 'По умолчанию элемент <a>, используемый для ссылок, <span>, <em> и <strong> это .... элемент. Заполните пропуск',
-        variants:
-          ['Блочный',
-            'Строчный',
-            'Объектно-ориентированный',
-            'Табличный',
+      correct: 3,
+    },
+    {
+      title: 'How do you insert a comment in a CSS file?',
+      variants:
+        ['" this is a comment ',
+          '/* this is a comment */  ',
+          '// this is a comment //',
+          '// this is a comment',
         ],
-        correct: 1,
-      },
-      {
-        title: 'Если не изменить намеренно тип отображения, то такие элементы, как заголовки (например, <h1>) и <p>, все используют ...... как свой внешний тип отображения по умолчанию.Заполните пропуск       ',
-        variants:
-          ['Блок',
-            'Строку',
-            'Форму',
-            'Объект',
+      correct: 1,
+    },
+    {
+      title: 'Which property is used to change the background color?',
+      variants:
+        ['color',
+          'bgcolor',
+          'background-color',
         ],
-        correct: 0,
-      },    
-      {
-        title: 'Что значит схлопывание внешних отступов в Css? ',
-        variants:
-          [' Если у вас есть два элемента, внешние отступы которых соприкасаются, и оба значения margin положительные, то эти значения будут объединены в одно, равное меньшему из двух значений. А если одно или оба значения отрицательны, то сумма отрицательных значений будет вычтена из общей суммы.          ',
-            'Если у вас есть два элемента, внешние отступы которых соприкасаются, и оба значения margin положительные, то эти значения будут объединены в одно, равное большему из двух значений. А если одно или оба значения отрицательны, то сумма отрицательных значений будет вычтена из общей суммы.            ',
-            'Если у вас есть два элемента, внешние отступы которых соприкасаются, и оба значения margin положительные, то эти значения будут объединены в одно, равное большему из двух значений. А если одно или оба значения отрицательны, то сумма отрицательных значений будет прибавлена к общей суммы. ',
-            ' Если у вас есть два элемента, внешние отступы которых соприкасаются, и оба значения margin положительные, то эти значения будут объединены в одно, равное большему из двух значений. А если одно или оба значения отрицательны, то разница отрицательных значений будет вычтена из общей суммы.            ',
+      correct: 2,
+    },
+    {
+      title: 'How do you add a background color for all <h1> elements?',
+      variants:
+        ['h1 {background-color:#FFFFFF;}  ',
+          'h1.all {background-color:#FFFFFF;} ',
+          'all.h1 {background-color:#FFFFFF;}',
+          
         ],
-        correct: 1,
-      },    
-      {
-        title: 'К какому элементу относятся такие характеристики? "Применяются свойства width и height.Использование padding, margin и border приведёт к тому, что другие элементы будут отодвинуты от нашего элемента." Он не перенесётся на новую строку и станет больше, чем его содержимое, только если вы явно зададите свойства width и height.',
-        variants:
-          ['Элемент с float: inline-block   ',
-            'Элемент с position: inline-block',
-            'Элемент с display: inline-block',
-            'Элемент с inline-block: inline-block',
+      correct: 0,
+    },
+    {
+      title: 'Which CSS property is used to change the text color of an element?',
+      variants:
+        ['fgcolor ',
+          'text-color',
+          'color ',
         ],
-        correct: 2,
-      },
-      {
-        title: 'Какое опредление описывается? "Порядок следования правил в CSS имеет значение; когда применимы два правила, имеющие одинаковую специфичность, используется то, которое идёт в CSS последним."        ',
-        variants:
-          ['Наследование',
-            'Каскад',
-            'Специфичность',
+      correct: 2,
+    },
+    {
+      title: 'Which CSS property controls the text size?',
+      variants:
+        ['font-style',
+          'font-size',
+          'text-size',
+          'text-style',
         ],
-        correct: 1,
-      },
-      {
-        title: 'Заполните пропуск " .... определяет, как браузер решает, какое именно правило применяется в случае, когда несколько правил имеют разные селекторы, но, тем не менее, могут быть применены к одному и тому же элементу."         ',
-        variants:
-          ['Наследование',
-            'Каскад',
-            'Специфичность',
+      correct: 1,
+    },
+    {
+      title: 'What is the correct CSS syntax for making all the <p> elements bold?',
+      variants:
+        ['<p style="text-size:bold;"> ',
+          'p {font-weight:bold;} ',
+          'p {text-size:bold;}',
+          '<p style="font-size:bold;">',
         ],
-        correct: 2,
-      },
-      {
-        title: 'Какое опредление описывается? "Некоторые значения свойства CSS, установленные для родительских элементов наследуются их дочерними элементами, а некоторые нет."        ',
-        variants:
-          ['Наследование',
-            'Каскад',
-            'Специфичность',
+      correct: 1,
+    },
+    {
+      title: 'How do you display hyperlinks without an underline?',
+      variants:
+        ['a {decoration:no-underline;}  ',
+          'a {text-decoration:no-underline;}',
+          'a {text-decoration:none;} ',
+          'a {underline:none;}',
         ],
-        correct: 0,
-      },
-      {
-        title: 'Какие специальные универсальные значения свойства для контроля наследования есть в CSS?',
-        variants:
-          ['В СSS нет специальных универсальных значений свойства для контроля наследования',
-            'inherit, initial',
-            'inherit, initial, unset, revert',
-            'initial, unset, revert',
+      correct: 2,
+    },
+    {
+      title: 'How do you make each word in a text start with a capital letter?',
+      variants:
+        ['text-transform:capitalize',
+          'text-style:capitalize',
+          'transform:capitalize',
+          'You can not do that with CSS',
         ],
-        correct: 2,
-      },
-      {
-        title: 'Вот три фактора, перечисленные в порядке возрастания важности. Следующий отменяет предыдущий. Какой порядок правильный?',
-        variants:
-          ['Важность, Порядок наследования, Специфичность',
-            'Порядок наследования,  Важность, Специфичность',
-            'Специфичность, Важность, Порядок наследования',
-            'Порядок наследования, Специфичность, Важность',
+      correct: 0,
+    },
+    {
+      title: 'Which property is used to change the font of an element?',
+      variants:
+        ['font-weight  ',
+          'font-style',
+          'font-family  ',
         ],
-        correct: 3,
-      },
-      {
-        title: 'Существует специальный элемент CSS, который используется, чтобы сделать конкретное свойство и значение самыми специфичными, таким образом переопределяя нормальные правила каскада?        ',
-        variants:
-          ['Нет, правила каскада невозможно преодолеть',
-            'Да, этот элемнет !important',
+      correct: 2,
+    },
+    {
+      title: 'How do you make the text bold?',
+      variants:
+        ['font-weight:bold;',
+          'font:bold;',
+          'style:bold;',
         ],
-        correct: 1,
-      },      
-      {
-        title: 'Расположите элементы в порядке ВОЗРАСТАНИЯ специфичности?         ',
-        variants:
-          ['Встроенный стиль, Селектор индентификатора (id), Селектор класса, Селектор атрибутов, Селектор псевдокласса, Селектор тегов HTML, Селектор псевдоэлементов          ',
-            'Селектор псевдоэлементов, Селектор тегов HTML, Селектор псевдокласса, Селектор атрибутов, Селектор класса,Селектор индентификатора (id), Встроенный стиль            ',
-            'Селектор псевдоэлементов, Селектор тегов HTML, Селектор псевдокласса, Селектор класса,Селектор индентификатора (id),Селектор атрибутов, Встроенный стиль            ',
-            'Селектор атрибутов,Селектор тегов HTML,Селектор псевдоэлементов,Селектор псевдокласса, Селектор класса,Селектор индентификатора (id),Встроенный стиль            ',
+      correct: 0,
+    },
+    {
+      title: 'How do you display a border like this: The top border = 10 pixels; The bottom border = 5 pixels; The left border = 20 pixels; The right border = 1pixel?',
+      variants:
+        ['border-width:5px 20px 10px 1px;  ',
+          'border-width:10px 5px 20px 1px;',
+          'border-width:10px 20px 5px 1px;',
+          'border-width:10px 1px 5px 20px;  ',
         ],
-        correct: 1,
-      },
+      correct: 3,
+    },
+    {
+      title: 'Which property is used to change the left margin of an element?',
+      variants:
+        ['margin-left  ',
+          'indent',
+          'padding-left',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'When using the padding property; are you allowed to use negative values?',
+      variants:
+        ['No',
+          'Yes',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'How do you make a list that lists its items with squares?',
+      variants:
+        ['list-style-type: square;',
+          'list: square;',
+          'list-type: square;',
+        ],
+      correct: 0,
+    },
 
-    ]
+    {
+      title: 'How do you select an element with id "demo"?',
+      variants:
+        ['demo ',
+          '#demo ',
+          '*demo',
+          '.demo',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'How do you select elements with class name "test"?',
+      variants:
+        ['#test  ',
+          '.test ',
+          'test',
+          '*test',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'How do you select all p elements inside a div element?',
+      variants:
+        ['div + p ',
+          'div p ',
+          'div.p',
+        ],
+      correct: 1,
+    },
+    {
+      title: 'How do you group selectors?',
+      variants:
+        ['Separate each selector with a comma ',
+          'Separate each selector with a plus sign',
+          'Separate each selector with a space',
+        ],
+      correct: 0,
+    },
+    {
+      title: 'What is the default value of the position property?',
+      variants:
+        ['absolute',
+          'static',
+          'fixed',
+          'relative',
+        ],
+      correct: 1,
+    },
+  ]
 }
 
 export const reactQuiz = {
-    title: 'React',
-    position: 4,
-    path: '/reactQuestions',
-    name: 'React Quiz',
-    questions   : [ {
-        title: 'Где правильно передана функция в качестве свойства?',
-        variants:
-          ['rgument={this.someFunction}',
-            'argument=(this.someFunction)',
-            'argument={this.someFunction ()}',
-            'argument={someFunction}',
-            'argument={this.someFunction {}}'],
-        correct: 4,
-      },
-      {
-        title: 'Куда можно встроить готовый код из метода render()?',
-        variants:
-          ['Только в div',
-            'Только в тег, у которого есть id',
-            'argument={this.someFunction ()}',
-            'В div или же в span',
-            'В любой тег'],
-        correct: 4,
-      },
-      {
-        title: 'React JS – это...',
-        variants:
-          ['MVC-фреймворк',
-            'фреймворк',
-            'Back-end платформа',
-            'JavaScript библиотека',
-          ],
-        correct: 3,
-      },
-      {
-        title: 'Чем свойства отличаются от состояний?',
-        variants:
-          ['Свойства можно изменять, состояния нельзя',
-            'Свойства для работы со значениями, состояния для работы с функциями',
-            'Состояния для работы со значениями, свойства для работы с функциями',
-            'Состояния можно изменять, свойства нельзя',
-          ],
-        correct: 3,
-      },
-      {
-        title: 'Какая компания разработала React JS?',
-        variants:
-          ['Twitter',
-            'GitHub',
-            'Google',
-            'Amazon',
-            'Facebook'],
-        correct: 4,
-      },
-      {
-        title: 'Как обратится к свойству weight? <Test weight="203" height="182" /> ',
-        variants:
-          ['{props.weight}',
-            '{this.weight}',
-            '{this.prop.weight}',
-            '{prop.weight}',
-            '{this.props.weight}'],
-        correct: 4,
-      },
-      {
-        title: 'Методы жизненного цикла в основном используются',
-        variants:
-          ['для отслеживания истории событий',
-            'для расширения компонентов',
-            'для освобождения ресурсов',
-            'никакой из вышеперечисленных'],
-        correct: 2,
-      },
-      {
-        title: '… может быть выполнено, когда необходимо возвратить несколько элементов из компонента.',
-        variants:
-          ['Абстракция',
-            'Упаковка',
-            'Изоляция',
-            'Обертывание',
-          ],
-        correct: 3,
-      },
-      {
-        title: 'Как получить доступ к функции fetch() с элемента h1 в JSX?',
-        variants:
-          ['<h1>{fetch()}</h1>',
-            '<h1>${fetch()}</h1>',
-            '<h1>{fetch}</h1>',
-            '<h1>${fetch}</h1>',
-          ],
-        correct: 0,
-      },
-      {
-        title: 'Какой метод необходимо переопределить в React Component, чтобы компонент не обновлялся?',
-        variants:
-          ['willComponentUpdate',
-            'shouldComponentUpdate',
-            'componentDidUpdate',
-            'componentDidMount',
-          ],
-        correct: 1,
-      },
-      {
-        title: 'Что используется для передачи данных к компоненту извне?',
-        variants:
-          ['setState',
-            'render with arguments',
-            'PropTypes',
-            'props',
-          ],
-        correct: 3,
-      },
-      {
-        title: 'Какой метод вызывается в React Component после того, как компонент отображается в первый раз?',
-        variants:
-          ['componentDidUpdate',
-            'componentDidMount',
-            'componentMounted',
-            'componentUpdated',
-            ],
-        correct: 1,
-      },
-      {
-        title: 'Выберите правильный синтаксис для обработчика события “щелчок по кнопке” foo.',
-        variants:
-          ['<button onclick={this.foo()}>',
-            '<button onclick={this.foo}>',
-            '<button onClick={this.foo()}>',
-            '<button onClick={this.foo}> ',
-          ],
-        correct: 3,
-      },
-      {
-        title: 'Что происходит при вызове setState() в методе render()?',
-        variants:
-          ['На экране появляется повторяющийся вывод',
-            'Ошибка клавиши дублирования',
-            'Ошибка переполнения стека',
-            'Ничего не происходит',
-          ],
-        correct: 2,
-      },
-    
-    
-      {
-        title: 'Как создать встроенный стиль в JSX, указывая font-size:12px и color:red;',
-        variants:
-          ['style={{font-size:12,color: "red"}}',
-            'style={{fontSize:"12px",color:"red"}}',
-            'style={fontSize:"12px",color:"red"}',
-            'style={{font-size:12px,color:"red"}}',
-          ],
-        correct: 1,
-      },
-    
-      {
-        title: 'Какие преимущества имеет ReactJS?',
-        variants:
-          ['Повышает производительность приложений с помощью Virtual DOM',
-            'JSX создает код, легкий для чтения и записи',
-            'Обрабатывает и на стороне клиента, и сервера',
-            'Легко выполняет интеграцию с другими фреймворками (Angular, BackboneJS), так как является библиотекой с открытым исходным кодом',
-            'Все вышеперечисленные'],
-        correct: 4,
-      },
-    
-      {
-        title: 'Что такое состояние (state) в React?',
-        variants:
-          ['Постоянное хранилище',
-            'Хранение внутренних данных (объекта) компонента',
-    
-          ],
-        correct: 1,
-      },
-    
-      {
-        title: 'Что такое ReactJS?',
-        variants:
-          ['Фреймворк на стороне сервера',
-            'Фреймворк пользовательского интерфейса',
-            'Библиотека для создания интерфейсов взаимодействия',
-          ],
-        correct: 2,
-      },
-    
-      {
-        title: 'Выберите способы, которыми обрабатываются данные в React.',
-        variants:
-          ['state & props',
-            'services & components',
-          ],
-        correct: 1,
-      },
-    
-      {
-        title: 'Какие недостатки имеет ReactJS?',
-        variants:
-          ['Является только уровнем просмотра, все еще есть необходимость подключить код для Ajax запросов,событий и т. д.',
-            'Сама библиотека довольно большая.',
-            'Процесс обучения может быть медленным.',
-            'Все вышеперечисленные',
-          ],
-        correct: 3,
-      },
-    
-      {
-        title: 'Выберите правильный ответ касательно JSX',
-        variants:
-          ['JSX работает быстрее, так как он выполняет оптимизацию при компиляции кода в JavaScript',
-            'JSX - это синтаксическая нотация для JavaScript XML',
-            'JSX обеспечивает выразительные возможности JavaScript вместе с HTML подобно синтаксическому шаблону',
-            'Все вышеперечисленные',
-          ],
-        correct: 3,
-      },
-    
-      {
-        title: 'React объединяет переданный вами объект c текущим состоянием (state), используя    ',
-        variants:
-          ['setState()',
-            'State() ',
-          ],
-        correct: 0,
-      },
-    
-      {
-        title: 'Произвольный входной сигнал компонентов называется...',
-        variants:
-          ['Keys',
-            'Props',
-            'Elements',
-            'Ref',
-          ],
-        correct: 1,
-      },
-    
-      {
-        title: 'ref используется для ссылки на элемент/компонент, возвращаемый...',
-        variants:
-          ['react()',
-            'render() ',
-            'reduce()',
-            'refer()',
-          ],
-        correct: 1,
-      },
-    
-    
-      {
-        title: 'Что такое HOC?',
-        variants:
-          ['Это технология, которая перехватывает вызовы функций и помогает использовать возможности React без написания классов. ',
-            'Функция, которая на входе в параметрах принимает компонент, а на выходе возвращает новый компонент - контейнерный компонент для переданного в параметрах компонента.        ',
-            'Это чистая функция, которая принимает старый state, принимает action , если нужно этот action применяет к этому state (по правилам эмьютабельности) и возвращает новый state либо возвращает этот же state который был не изменённый.   ',
-          ],
-        correct: 1,
-      },
-    
-      {
-        title: 'Что такое Reducer ?',
-        variants:
-          ['Это технология, которая перехватывает вызовы функций и помогает использовать возможности React без написания классов. ',
-            'Функция, которая на входе в параметрах принимает компонент, а на выходе возвращает новый компонент - контейнерный компонент для переданного в параметрах компонента.       ',
-            'Это чистая функция, которая принимает старый state, принимает action , если нужно этот action применяет к этому state (по правилам эмьютабельности) и возвращает новый state либо возвращает этот же state который был не изменённый.    ',
-           
-          ],
-        correct: 2,
-      },
-    
-      {
-        title: 'Что такое Hook ?',
-        variants:
-          ['Это технология, которая перехватывает вызовы функций и помогает использовать возможности React без написания классов.',
-            'Функция, которая на входе в параметрах принимает компонент, а на выходе возвращает новый компонент - контейнерный компонент для переданного в параметрах компонента. ',
-            'Это чистая функция, которая принимает старый state, принимает action , если нужно этот action применяет к этому state (по правилам эмьютабельности) и возвращает новый state либо возвращает этот же state который был не изменённый.',
-          ],
-        correct: 0,
-      },
-
-      {
-        title: 'Зачем нужен Redux?',
-        variants:
-          ['Предоставляет возможность создать store',
-            'Это библиотека которая отрисовывает UI',
-            'Это технология, которая перехватывает вызовы функций и помогает использовать возможности React без написания классов. ',
-          ],
-        correct: 0,
-      },
-      
-      {
-        title: 'Что делает метод Srore getState()?',
-        variants:
-          ['Отправляет экшен. Это единственный способ изменить состояние.',
-            'Возвращает текущее состояние вашего приложения. Оно равно последнему возвращенному значению из редюсера стора.  ',
-            'Добавляет слушателя. Он будет вызываться каждый раз, когда экшен отправлен и некоторая часть дерева состояния могла потенциально измениться. ',
-            'Заменяет редюсер, который в настоящее время используется стором, чтобы вычислить состояние. ',
-            
-          ],
-        correct: 1,
-      },
-
-      {
-        title: 'Что делает метод Srore replaceReducer(nextReducer)?',
-        variants:
-          ['Отправляет экшен. Это единственный способ изменить состояние. ',
-            'Возвращает текущее состояние вашего приложения. Оно равно последнему возвращенному значению из редюсера стора. ',
-            'Добавляет слушателя. Он будет вызываться каждый раз, когда экшен отправлен и некоторая часть дерева состояния могла потенциально измениться.',
-            'Заменяет редюсер, который в настоящее время используется стором, чтобы вычислить состояние. ',
-            
-          ],
-        correct: 3,
-      },
-      {
-        title: 'Что делает метод Srore subscribe(listener)?',
-        variants:
-          ['Отправляет экшен. Это единственный способ изменить состояние. ',
-            'Возвращает текущее состояние вашего приложения. Оно равно последнему возвращенному значению из редюсера стора.',
-            'Добавляет слушателя. Он будет вызываться каждый раз, когда экшен отправлен и некоторая часть дерева состояния могла потенциально измениться.',
-            'Заменяет редюсер, который в настоящее время используется стором, чтобы вычислить состояние.',
-            
-          ],
-        correct: 2,
-      },
-      {
-        title: 'Что делает метод Srore dispatch(action)?',
-        variants:
-          ['Отправляет экшен. Это единственный способ изменить состояние.',
-            'Возвращает текущее состояние вашего приложения. Оно равно последнему возвращенному значению из редюсера стора. ',
-            'Добавляет слушателя. Он будет вызываться каждый раз, когда экшен отправлен и некоторая часть дерева состояния могла потенциально измениться. ',
-            'Заменяет редюсер, который в настоящее время используется стором, чтобы вычислить состояние. ',
-            
-          ],
-        correct: 0,
-      },
-
-      {
-        title: 'Функциональный Компонент в React это ',
-        variants:
-          ['Функция, которая принимает props, вызывается и возвращают новый state ',
-            'Функция, которая представляет из себя middleware, которая добавляется в Redux и позволяет использовать ассинхронный код внутри dispatch().  ',
-            'Функция, которая принимает props и возвращет JSX  ',
-            'Функция, с помощью которого React создает объект и использует методы жизненного цикла ',
-            
-          ],
-        correct: 2,
-      },
-      {
-        title: 'Классовый Компонент в React это  ',
-        variants:
-          ['Пользовательский компонент, который принимает props, вызывается и возвращают новый state ',
-            'Пользовательский компонент, который представляет из себя middleware, которая добавляется в Redux и позволяет использовать ассинхронный код внутри dispatch().       ',
-            'Пользовательский компонент, который принимает props и возвращет JSX   ',
-            'Пользовательский компонент,построенный на основе классов, с помощью которого React создает объект и использует методы жизненного цикла',
-            
-          ],
-        correct: 3,
-      },
-      {
-        title: 'Единственный обязательный метод в классовом компоненте?',
-        variants:
-          ['render()',
-            'componentDidMount()',
-            'mapStateToProps()',
-            'mapDispatchToProps()',
-            'componentDidUpdate()'
-          ],
-        correct: 0,
-      },
-
-      {
-        title: 'Этот метод жизненного цикла вызывается при удалении компонента из DOM.',
-        variants:
-          ['componentDidMount()',
-            'componentWillUnmount()',
-            'componentDidUpdate()',
-            
-          ],
-        correct: 1,
-      },
-      {
-        title: 'Этот метод жизненного цикла вызывается сразу после обновления. Не вызывается при первом рендере.  ?',
-        variants:
-          ['componentDidUpdate()',
-            'componentWillUnmount()',
-            'componentDidMount()',
-           
-          ],
-        correct: 0,
-      },
-      
-      {
-        title: 'Этот метод жизненного цикла вызывается сразу после монтирования(то есть вставки компонента в DOM). Это хорошее место для создания сетевых запросов.',
-        variants:
-          ['componentWillUnmount()',
-            'componentDidUpdate()',
-            'componentDidMount()',
-            
-          ],
-        correct: 2,
-      },
-      {
-        title: 'Что такое reducer?',
-        variants:
-          ['Функция, которая возвращает нам объект action',
-            'Это чистая функция, которая принимает старый state, принимает action, если нужно - этот action применяется к этому state(по правилам эмьютабельности) и возвращает новый state, либо возвращает этот же state, который был не измененный, который пришел в этот reducer.',
-            'Это объект, в котором инкапсулированны все данныы для того, что action получил эти данные и применил изменения на свой state ',
-            'Это функция, которая принимает весь state целиком, достает из него то, что нужно и возвращает в бизнес. ',
-            
-          ],
-        correct: 1,
-      },
-      {
-        title: 'Что такое Action Creator?',
-        variants:
-          ['Функция, которая возвращает нам объект action',
-            'Это чистая функция, которая принимает старый state, принимает action, если нужно - этот action применяется к этому state(по правилам эмьютабельности) и возвращает новый state, либо возвращает этот же state, который был не измененный, который пришел в этот reducer.',
-            'Это объект, в котором инкапсулированны все данныe для того, что action получил эти данные и применил изменения на свой state ',
-            'Это функция, которая принимает весь state целиком, достает из него то, что нужно и возвращает в бизнес.',
-           
-          ],
-        correct: 0,
-      },
-      {
-        title: 'Что такое Action?',
-        variants:
-          ['Это объект, в котором инкапсулированны все данныы для того, что reducer получил эти данные и применил изменения на свой state ',
-            'Это чистая функция, которая принимает старый state, возвращает новый state, либо возвращает этот же state, который был не измененный, который пришел в reducer. ',
-            'Функция, которая возвращает нам новый state.',
-            'Функция, которая отправляет данные в reduser. Это единственный способ изменить state приложения.',
-           
-          ],
-        correct: 0,
-      },
-      {
-        title: 'Что такое Dispatch?',
-        variants:
-          ['Функция, которая отправляет action. Это единственный способ изменить state приложения. ',
-            'Это функция, которая принимает весь state целиком, достает из него то, что нужно и возвращает в бизнес. ',
-            'Функция, которая возвращает нам новый state.',
-            'Это объект, в котором инкапсулированны все данныы для того, что reducer получил эти данные и применил изменения на свой state',
-          
-          ],
-        correct: 0,
-      },
-      
-      {
-        title: 'Что такое Selector?',
-        variants:
-          ['Функция, которая отправляет action. Это единственный способ изменить state приложения. ',
-            'Это объект, в котором инкапсулированны все данныы для того, что reducer получил эти данные и применил изменения на свой state ',
-            'Функция, которая возвращает нам новый state. ',
-            'Это функция, которая принимает весь state целиком, достает из него то, что нужно и возвращает в бизнес. ',
-            
-          ],
-        correct: 3,
-      },
+  title: 'React',
+  position: 4,
+  path: '/reactQuestions',
+  name: 'React Quiz',
+  questions: [{
+    title: 'What is the correct command to create a new React project?',
+    variants:
+      ['npm create-react-app  ',
+        'npx create-react-app',
+        'npx create-react-app myReactApp  ',
+        'npm create-react-app myReactApp',
+      ],
+    correct: 2,
+  },
+  {
+    title: 'What does myReactApp refer to in the following command? npx create-react-app myReactApp',
+    variants:
+      ['A reference to an existing app ',
+        'The type of app to create',
+        'The name you want to use for the new app',
+        'The directory to create the new app in',
+      ],
+    correct: 2,
+  },
+  {
+    title: 'What command is used to start the React local development server?',
+    variants:
+      ['npm run dev ',
+        'npm build',
+        'npm start',
+        'npm serve',
+      ],
+    correct: 2,
+  },
+  {
+    title: 'What is the default local host port that a React development server uses?',
+    variants:
+      ['5000 ',
+        '8080',
+        '3500',
+        '3000 ',
+      ],
+    correct: 3,
+  },
+  {
+    title: 'To develop and run React code, Node.js is required.',
+    variants:
+      ['True',
+        'False',
+        ],
+    correct: 0,
+  },
+  {
+    title: 'What is the children prop?/> ',
+    variants:
+      ['A property that adds child values to state  ',
+        'A property that lets you pass data to child components',
+        'A property that lets you set an object as a property',
+        'A property that lets you nest components in other components',
+      ],
+    correct: 3,
+  },
+  {
+    title: 'Which keyword creates a constant in JavaScript?',
+    variants:
+      ['constant'  ,
+        'var',
+        'let',
+        'const'],
+    correct: 3,
+  },
+  {
+    title: 'A copy of the "real" DOM that is kept in memory is called what?',
+    variants:
+      ['Shadow DOM ',
+        'Virtual DOM ',
+        'React DOM',
+        'DOM',
+      ],
+    correct: 1,
+  },
+  {
+    title: 'React component names must begin with an uppercase letter.',
+    variants:
+      ['True',
+        'False',
+      ],
+    correct: 0,
+  },
+  {
+    title: 'Which operator can be used to conditionally render a React component?',
+    variants:
+      ['&& ',
+        '||',
+        '::',
+        '??',
+      ],
+    correct: 0,
+  },
+  {
+    title: 'When rendering a list using the JavaScript map() method, what is required for each element rendered?',
+    variants:
+      ['id',
+        'index',
+        'key',
+        'data',
+      ],
+    correct: 2,
+  },
+  {
+    title: 'What tool does React use to compile JSX?',
+    variants:
+      ['JSX Compiler ',
+        'React Router',
+        'ReactDOM',
+        'Babel',
+      ],
+    correct: 3,
+  },
+  {
+    title: 'How can you optimze performance for a function component that always renders the same way?',
+    variants:
+      ['Use the useReducer Hook.',
+        'Use the shouldComponentUpdate lifecycle method.',
+        'Wrap it in the React.memo higher-order component.',
+        'Use the useMemo Hook. ',
+      ],
+    correct: 3,
+  },
+  {
+    title: 'What is a common use case for ref?',
+    variants:
+      ['To refer to another JavaScript file',
+        'To refer to a function',
+        'To directly access a DOM node ',
+        'To bind the function',
+      ],
+    correct: 2,
+  },
 
 
+  {
+    title: 'React can only render elements in the root document element.',
+    variants:
+      ['True',
+        'False ',
+      ],
+    correct: 1,
+  },
 
-      {
-        title: 'Этот метод жизненного цикла вызывается сразу после обновления. Не вызывается при первом рендере.  ?',
-        variants:
-          ['componentDidUpdate',
-            'coomponentWillUnmount',
-            'componentDidMount',
-           
-          ],
-        correct: 0,
-      },
+  {
+    title: 'What is the correct syntax to import a Component from React?',
+    variants:
+      ['import { Component } from "react"',
+        'import React.Component from "react"',
+        'import [ Component ] from "react"',
+        'import Component from "react"',
+      ],
+    correct: 0,
+  },
 
-      {
-        title: 'Этот метод жизненного цикла вызывается сразу после обновления. Не вызывается при первом рендере.  ?',
-        variants:
-          ['componentDidUpdate',
-            'coomponentWillUnmount',
-            'componentDidMount',
-           
-          ],
-        correct: 0,
-      },
-      
-    ]
+  {
+    title: 'React separates the user interface into components. How are components combinded to create a user interface?',
+    variants:
+      ['By putting them in a folder structure',
+        'By nesting components ',
+        'With webpack',
+        'With code splitting',
+      ],
+    correct: 1,
+  },
+
+  {
+    title: 'Although React Hooks generally replace class components, there are no plans to remove classes from React.',
+    variants:
+      ['False',
+        'True',
+      ],
+    correct: 1,
+  },
+
+  {
+    title: 'Which of the following is NOT a rule for React Hooks?',
+    variants:
+      ['Hooks can be called in Class or Function components  ',
+        'Hooks can only be called at the top level of a component',
+        'Hooks cannot be conditional',
+        'Hooks can only be called inside React Function components',
+      ],
+    correct: 0,
+  },
+
+  {
+    title: 'Why should you avoid copying the values of props into a component is state?',
+    variants:
+      ['Because you should never mutate state',
+        'Because that would create two instances of the same state that could become out of sync ',
+        'Because you want to allow data to flow back up to the parent',
+        'Because prop values cannot be stored in state',
+      ],
+    correct: 1,
+  },
+
+  ]
 }
-
-
