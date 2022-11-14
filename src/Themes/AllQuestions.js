@@ -29,7 +29,7 @@ const AllQuestions = ({ name, questions }) => {
       <div className='result'>
         <img src={resultGif} />
         <h2> Your result is {correct} correct answers out of {questions.length} </h2>
-        <Button variant="contained" color='success' size='large' onClick={() => navigate('/Quiz')}> Try again </Button>
+        <Button variant="contained" color='success' size='large' onClick={() => navigate('/')}> Try again </Button>
       </div>
     )
   }
@@ -97,4 +97,3 @@ const AllQuestions = ({ name, questions }) => {
   )
 }
 export default AllQuestions
-
