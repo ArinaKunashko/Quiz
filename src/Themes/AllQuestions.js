@@ -16,8 +16,6 @@ import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 
-
-
 const AllQuestions = ({ name, questions }) => {
   const navigate = useNavigate()
   const Result = ({ correct }) => {

@@ -5,8 +5,6 @@ import { Routes, Route, HashRouter } from 'react-router-dom'
 import Home from './Home'
 import * as Quizes from './quizes'
 
-
-
 function AppJs() {
   const quizes = Object.values(Quizes)
 
