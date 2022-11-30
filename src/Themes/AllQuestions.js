@@ -15,6 +15,7 @@ import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
+import { Grid } from '@mui/material'
 
 const AllQuestions = ({ name, questions }) => {
   const navigate = useNavigate()
@@ -38,22 +39,21 @@ const AllQuestions = ({ name, questions }) => {
 
     return (
       <>
-        <div>
-
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Grid grid-xs-auto >
+          <Box sx={{ display: 'flex', alignItems: 'center'}}>
             <Box sx={{ width: '100%', mr: 1 }}>
               <LinearProgress variant='determinate'
                 value={percentage}
                 color='success'
                 sx={{ height: 17, borderRadius: 6 }} />
             </Box>
-            <Box sx={{ minWidth: 35 }}>
+            <Box>
               <Typography variant='body2'
                 color='text.secondary'>{`${Math.round((step / questions.length) * 100)}%`}
               </Typography>
             </Box>
           </Box>
-        </div>
+        
         <h1>{question.title}</h1>
         <List>
           {
@@ -67,6 +67,7 @@ const AllQuestions = ({ name, questions }) => {
             ))
           }
         </List>
+        </Grid>
       </>
     )
   }
